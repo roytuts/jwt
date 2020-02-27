@@ -1,0 +1,35 @@
+buildscript {
+	ext {
+		springBootVersion = '2.2.4.RELEASE'
+	}
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	implementation('javax.servlet:jstl:1.2')
+	implementation('mysql:mysql-connector-java:8.0.17')
+	//required only if jdk 9 or higher version is used
+    runtimeOnly('javax.xml.bind:jaxb-api:2.4.0-b180830.0359')
+	//runtime("com.h2database:h2:1.4.196")
+}
