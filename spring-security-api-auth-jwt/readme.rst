@@ -1,1 +1,3 @@
-You can go through the tutorial https://www.roytuts.com/spring-security-authentication-and-role-based-authorization-using-jwt/
+Please follow the tutorial https://roytuts.com/spring-security-authentication-and-role-based-authorization-using-jwt/
+
+For spring boot 3 the java files will be appended with _3.
